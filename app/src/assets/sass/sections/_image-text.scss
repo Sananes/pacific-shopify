@@ -1,0 +1,43 @@
+.section-image-with-text {
+  @extend %section-spacing;
+
+  .image-with-text-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .image-with-text-content {
+    @extend %caption-w-title;
+    @include span(6 of 12);
+    padding: 0 span(1 of 12);
+    text-align: center;
+
+    button {
+      @extend %button-large;
+    }
+  }
+}
+
+.image-with-text-image {
+  @include span(6 of 12);
+  margin-right: 0;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  .image-with-text-alignment-left & {
+    order: -1;
+    margin-right: inherit;
+  }
+}
+
+.image-with-text-content {
+  .image-with-text-alignment-left & {
+    margin-right: 0;
+  }
+}

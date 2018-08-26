@@ -1,0 +1,30 @@
+.section-style-guide {
+  @extend %container, %section-spacing;
+  @include container(800px);
+}
+
+.style-guide-row {
+  display: block;
+  margin: 8px 0;
+  @include clearfix;
+}
+
+.style-guide-component {
+  margin: 8px 0;
+
+  .style-guide-row-of-3 & {
+    @include span(3 of 12);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  
+  .style-guide-label {
+    border-top: 1px solid $color--border;
+    font-size: 12px;
+    padding: 8px 0;
+    margin-top: 16px;
+    color: $color--text-lighter;
+  }
+}

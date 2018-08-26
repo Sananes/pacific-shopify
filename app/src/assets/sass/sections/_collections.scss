@@ -1,0 +1,87 @@
+.section-collection {
+  @extend %section-spacing;
+  height: 100%;
+
+  .collection-container {
+    height: 100%;
+  }
+
+  .collection-item {
+    @extend %caption-w-title;
+    position: relative;
+    overflow: hidden;
+
+    .collection-caption {
+      margin-top: 0;
+    }
+
+    .collection-title {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .collection-title + 
+    .collection-subheading {
+      margin-top: 0;
+    }
+  }
+
+  .collection-image-overlay {
+    position: relative;
+    object-fit: cover;
+  
+    img {
+      width: 100%;
+      display: block;
+      vertical-align: bottom;
+      transform: scale(1);
+      transition: transform $transition--longer $transition--easing;
+    }
+  }
+
+  .collection-row-of-2 {
+
+    .collection-item {
+      @include span(1 of 2);
+    }
+  }
+}
+
+.collection-item {
+  &:hover {
+    img {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.collection-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: gutter() 10% gutter() gutter();
+
+  .collection-alignment-center & {
+    margin: 0 auto;
+  }
+
+  .collection-alignment-top-right &,
+  .collection-alignment-right &,
+  .collection-alignment-bottom-right & {
+    top: 0;
+    right: 0;
+    left: auto;
+    padding-right: gutter();
+    padding-left: 10%;
+  }
+
+  .collection-alignment-bottom-right & {
+    top: auto;
+    bottom: 0;
+  }
+
+  .collection-alignment-bottom-left & {
+    right: 0;
+    left: auto;
+  }
+}

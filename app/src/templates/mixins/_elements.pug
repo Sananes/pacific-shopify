@@ -1,0 +1,17 @@
+mixin select(name, label, className, active)
+    if label
+      label=label
+    .custom-select
+      .custom-select-wrapper(class!= className)
+        span=name
+        if active
+          +svg('chevron-up', null, 'chevron')
+        else
+          +svg('chevron-down', null, 'chevron')
+
+mixin section-divider()
+  .section-divider
+
+mixin label-component(name, description)
+  .style-guide-label=name
+  .style-guide-description!=description

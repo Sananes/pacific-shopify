@@ -1,0 +1,131 @@
+.section-slideshow {
+  position: relative;
+  background: $color--placeholder;
+  margin: 0;
+  height: 100%;
+
+  .slideshow-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  button {
+    @extend %button-large;
+  }
+
+  .slideshow-content {
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    padding: 24px 0;
+    z-index: 10;
+  }
+
+  .slideshow-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .caption {
+    margin-top: 0;
+  }
+
+  .caption + .slideshow-title {
+    margin-top: 0;
+  }
+
+  .slideshow-subheading {
+    @include font-size($font-size--body-large);
+    margin-top: 4px;
+  }
+
+  .slideshow-cover-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      display: block;
+      margin: auto;
+      animation: zoomin 1.2s $transition--easing,
+                 fadeIn 1s $transition--easing;
+      transform: scale(1);
+      transition: transform $transition--longer $transition--easing;
+
+    }
+  }
+
+  .slideshow-navigation {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .slideshow-navigation-left,
+  .slideshow-navigation-right {
+    position: absolute;
+    // display: inline-block;
+    display: none;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      color: transparentize($color--black, 0.15);
+    }
+  }
+
+  .slideshow-navigation-left {
+    left: 16px;
+  }
+
+  .slideshow-navigation-right {
+    right: 16px;
+    left: auto;
+  }
+
+  .slideshow-pagination {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 32px;
+    margin: 0 auto;
+  }
+
+  .slideshow-pagination-item  {
+    display: inline-block;
+    min-width: 100px;
+    height: 3px;
+    background: transparentize($color--black, 0.85);
+    margin: 0 8px;
+    cursor: pointer;
+
+    &:first-of-type {
+      background: transparentize($color--black, 0.15);
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.01);
+    }
+  }
+}

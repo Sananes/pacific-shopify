@@ -1,0 +1,156 @@
+.header {
+  color: $color--heading;
+  border-bottom: 1px solid $color--border;
+
+  a {
+    color: $color--heading;
+  }
+}
+
+.header-container {
+  max-width: span(12 of 12);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  width: span(10 of 12);
+  text-align: center;
+
+  .logo-svg {
+    width: 117px;
+    height: 19px;
+  }
+
+  .store-title {
+    @include font-size($font-size--heading-2);
+    letter-spacing: -1px;
+    margin: 0 auto;
+  }
+  a {
+    color: $color--heading;
+  }
+
+  .header-minimal & {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-25%);
+  }
+}
+
+.header-search {
+  width: span(2 of 12);
+
+  svg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-minimal & {
+    display: flex;
+    margin-right: 16px;
+    width: auto;
+
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+.header-utilities {
+  width: span(2 of 12);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .header-minimal & {
+    flex: 1;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+  }
+}
+
+.header-currency,
+.header-cart {
+  font-weight: 500;
+}
+
+.header-search,
+.header-currency,
+.header-cart {
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $color--text-hover;
+  }
+}
+
+.header-search {
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.header-currency {
+  margin-right: 16px;
+  svg {
+    margin-left: 4px;
+  }
+}
+
+.header-cart {
+  svg {
+    margin-right: 4px;
+  }
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+
+  .header-minimal & {
+    padding-top: 0;
+    justify-content: flex-start;
+    flex: 1;
+  }
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    margin: 0px 8px;
+    
+    &:first-child {
+      margin-left: 0;
+
+      a { padding-left: 0; }
+    }
+  }
+
+  & > li a {
+    display: flex;
+    align-items: center;
+    color: $color--menu;
+    padding: 0 8px;
+    font-weight: 500;
+  }
+  svg {
+    margin-left: 4px;
+  }
+}

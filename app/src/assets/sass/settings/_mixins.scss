@@ -1,0 +1,150 @@
+/* Mixins
+------------------------- */
+
+// clearfix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+}
+
+// overall container mixin
+@mixin container(
+  $width: all,
+  $config: $susy,
+  $debug: false
+) {
+  $config: susy-settings($config);
+  $container-spread: map-get($config, 'container-spread');
+  $width: span($width $container-spread of $container-spread, $config);
+  
+  padding-left: gutters($susy);
+  padding-right: gutters($susy);
+
+  @include clearfix;
+  margin: 0 auto;
+  max-width: $width or 100%;
+
+  @include breakpoint(m) {
+    $config: susy-settings($susy-tablet);
+  }
+
+  @include breakpoint(s) {
+    $config: susy-settings($susy-mobile);
+  }
+}
+
+
+
+// Span Mixin
+// ----------
+@mixin span(
+  $span,
+  $config: $susy
+) {
+  width: span($span, $config);
+  
+  
+  @if index($span, 'last') {
+    float: left;
+
+  } @else {
+    float: left;
+    margin-right: gutter();
+  }
+
+  @include breakpoint(m) {
+    margin-right: gutter($susy-tablet);
+    width: span($span, $susy-tablet);
+  }
+
+  @include breakpoint(s) {
+    margin-right: gutter($susy-mobile);
+    width: span($span, $susy-mobile);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin breakpoint($point) {
+    @if $point == xl {
+      @media (min-width: em(1021px)) { @content; }
+    }
+    @else if $point == l {
+      @media (max-width: em(1020px)) { @content; }
+    }
+    @else if $point == m {
+      @media (max-width: em(720px)) { @content; }
+    }
+    @else if $point == s {
+      @media (max-width: em(540px)) { @content; }
+    }
+
+    @else if $point == xs {
+      @media (max-width: em(360px)) { @content; }
+    }
+  }
+  
+  /* PX to EM */
+  @function em($pixels, $context: $font-size-base) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
+  }
+  
+  @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+      @if $fs-breakpoint == default {
+        @include make-font-size($fs-font-size);
+      }
+      @else {
+        // If $fs-font-size is a key that exists in
+        // $fs-breakpoints, use the value
+        @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+          $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+        }
+        @media screen and (max-width: $fs-breakpoint) {
+          @include make-font-size($fs-font-size);
+        }
+      }
+    }
+  }
+  
+  /* Make font size */
+  @mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size) == "list" {
+      font-size: nth($fs-font-size, 1);
+      @if (length($fs-font-size) > 1) {
+        line-height: nth($fs-font-size, 2);
+      }
+    }
+    @else {
+      font-size: $fs-font-size;
+    }
+  }
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}

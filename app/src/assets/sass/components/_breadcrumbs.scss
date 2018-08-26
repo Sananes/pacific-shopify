@@ -1,0 +1,38 @@
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  padding: 16px 0;
+
+  > li {
+    display: flex;
+    align-items: center;
+    @include font-size($font-size--body-small);
+
+    svg {
+      color: $color--text-lighter;
+      margin: 0 4px;
+      width: 16px;
+      height: 16px;
+      fill: none;
+    }
+
+    &:after {
+      position: absolute;
+      right: 0;
+      content: "";
+    }
+
+    a {
+      color: $color--text;
+    }
+
+    &:last-child {
+      a {
+        color: $color--text-lighter;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+include ../mixins/_svgsprite.pug
+include ../mixins/_elements.pug
+
+.section-slideshow.section(data-animate)
+  .slideshow-cover-image
+    figure
+      img(src="assets/img/hero-image.jpg")
+  .slideshow-container.container
+    .slideshow-content
+      //- h6.caption This is the new works
+      h1.slideshow-title Joule Petite
+      p.slideshow-subheading Introducing watches featuring our new 100% vegetable-tanned Italian leather straps.
+      .slideshow-button
+        button Shop now
+  .slideshow-navigation
+    .slideshow-navigation-left
+      +svg('chevron-left')
+    .slideshow-navigation-right
+      +svg('chevron-right')
+  .slideshow-pagination
+    .slideshow-pagination-item
+    .slideshow-pagination-item
+    .slideshow-pagination-item

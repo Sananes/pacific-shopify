@@ -1,0 +1,54 @@
+if minimalHeader
+  .header.header-minimal
+    .container.header-container
+      .header-top
+        .header-menu
+          ul.main-menu
+            li
+              a(href='#') Shop
+                +svg('chevron-down', null, 'chevron')
+            li
+              a(href='#') Journal
+        .logo
+          h1.store-title
+            a(href='#')
+              +svg('pacific-logo', '0 0 117 19', 'logo-svg')
+        .header-utilities
+          a.header-currency.dropdown(href='#') EUR
+            +svg('chevron-down', null, 'chevron')
+          a.header-search(href="#")
+            +svg('search', '0 0 20 20')
+          a.header-cart(href="#")
+            +svg('shopping-basket')
+            |  0
+else
+  .header
+    .container.header-container
+      .header-top
+        a.header-search
+          +svg('search', '20 20')
+          | Search
+        .logo
+          h1.store-title
+            a(href='#')
+              +svg('pacific-logo', '117 19', 'logo-svg')
+        .header-utilities
+          a.header-currency.dropdown(href='#') EUR
+            +svg('chevron-down', null, 'chevron')
+          a.header-cart(href="#")
+            +svg('shopping-basket')
+            |  0
+      .header-menu
+        ul.main-menu
+          li
+            a(href='#') Home
+          li
+            a(href='#') Shop
+              +svg('chevron-down', null, 'chevron')
+          li
+            a(href='#') Journal
+          li
+            a(href='#') Presets
+              +svg('chevron-down', null, 'chevron')
+          li
+            a(href='#') Contact

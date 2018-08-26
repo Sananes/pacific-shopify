@@ -1,0 +1,55 @@
+/* Typographic scale
+------------------------- */
+$font-size--heading-1: (
+  default : (em(40px), 1.2),
+  l       : (em(32px), 1.25),
+);
+
+$font-size--heading-2: (
+  default : (em(32px), 1.25),
+  l       : (em(24px), 1.5),
+);
+
+$font-size--heading-3: (
+  default : (em(24px), 1.5),
+  s       : (em(20px), 1.5),
+);
+
+$font-size--heading-4: (
+  default : (em(18px), 1.5),
+  s       : (em(16px), 1.5),
+);
+
+$font-size--heading-5: (
+  default : (em(16px), 1.5)
+);
+
+$font-size--body-large: (
+  default : (em(18px), 1.75),
+  s       : (em(16px), 1.5),
+);
+
+$font-size--body: (
+  default : (em(16px), 1.75),
+  s       : (em(14px), 1.5),
+);
+
+$font-size--body-small: (
+  default : (em(14px), 1.71),
+);
+
+$font-size--body-smaller: (
+  default : (em(12px), 1.5),
+);
+
+$font-size--body-smallest: (
+  default : (em(10px), 1.2),
+);
+
+$font-size--button: (
+  default : (em(12px), 1.2),
+);
+
+$font-size--section-heading: (
+  default : (em(14px), 1.2),
+);

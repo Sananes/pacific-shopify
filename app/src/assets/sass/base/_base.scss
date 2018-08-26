@@ -1,0 +1,259 @@
+* { box-sizing: border-box; }
+
+html {
+  $grid-color: rgba(red, 0.15);
+  // background: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
+  // background-size: 1px $lines;
+}
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Avenir Next', system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 16px;
+  line-height: $line-height;
+  @include font-size($font-size--body);
+  color: $color--text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura', system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  color: $color--heading;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h1,
+%heading-1 {
+  @include font-size($font-size--heading-1);
+}
+
+h2,
+%heading-2 {
+  @include font-size($font-size--heading-2);
+}
+
+h3,
+%heading-3  {
+  @include font-size($font-size--heading-3);
+}
+
+h4, h5, h6 {
+  @include font-size($font-size--heading-4);
+}
+
+p.body-l {
+  @include font-size($font-size--body-large);
+}
+
+p {
+  @include font-size($font-size--body);
+}
+
+small, .body-s {
+  @include font-size($font-size--body-small);
+}
+
+p + p {
+  margin-top: 24px;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4 {
+  margin-top: 48px;
+}
+
+p + h5 {
+  margin-top: 40px;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  margin-top: 20px;
+}
+
+h5 + p {
+  margin-top: 16px;
+}
+
+a {
+  color: $color--text;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+figure, img {
+  padding:0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  
+  &.chevron {
+    width: em(16px);
+    height: em(16px);
+    stroke-width: 2px;
+    fill: transparent;
+  }
+}
+
+label,
+%label {
+  display: block;
+  color: $color--heading;
+  font-weight: $font--weight-medium;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  @extend %input;
+}
+
+select {
+  appearance: none;
+
+  &:after {
+    content: "";
+  }
+}
+
+.custom-select {
+  position: relative;
+  vertical-align: middle;
+  display: block;
+
+  .custom-select-wrapper {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $color--input-border;
+    padding: 5px 8px 5px 12px;
+    background: $color--input-background;
+    vertical-align: middle;
+    border-radius: $border-radius;
+    cursor: pointer;
+    width: 100%;
+    transition: color $transition--short $transition--easing,
+    background-color $transition--medium $transition--easing,
+    border $transition--medium $transition--easing;
+
+    span {
+      flex: 1;
+    }
+
+    svg {
+      margin-left: 4px;
+    }
+
+    &:hover,
+    &.hover {
+      color: $color--text-hover;
+      border-color: $color--input-border-hover;
+      background-color: $color--input-background-hover;
+    }
+
+    &:focus,
+    &.focused {
+      outline: 1;
+      outline-color: #5891FF;
+      border: 1px solid #5891FF;
+    }
+  }
+
+  &.active {
+
+  }
+
+  .custom-select-dropdown {
+    display: none;
+  }
+}
+
+.caption {
+  @extend %captions;
+  margin-bottom: 0;
+
+  &.small {
+    @extend %captions-smaller;
+  }
+}
+.page-title {
+  &.has-caption {
+    .caption + .page-title-heading {
+      margin-top: 0;
+    }
+  }
+}
+
+.accordian {
+  position: relative;
+  display: block;
+}
+
+.accordian + .accordian {
+  .accordian-wrapper {
+    border-top: 0;
+  }
+}
+
+.accordian-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid $color--border;
+  border-width: 1px 0;
+  padding: 9px 0;
+  color: $color--text;
+  cursor: pointer;
+
+  span {
+    flex: 1;
+  }
+
+  &:hover {
+    color: $color--text-hover;
+  }
+}
+
+.accordian-content {
+  display: none;
+  padding: 10px 0;
+}
+
+.caption + .title {
+  margin-top: 0;
+}
+
+.section + .section {
+  margin-bottom: 0;
+}
+
+.section + 
+.section.has-section-title {
+  margin-top: 48px;
+}
+
+.section-divider + .section {
+  margin-top: 0;
+}
+
+.section-title {
+  @extend %section-title;
+}

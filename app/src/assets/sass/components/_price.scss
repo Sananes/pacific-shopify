@@ -1,0 +1,12 @@
+.price-default {
+  color: $color--heading;
+}
+
+.price-sale {
+  text-decoration: line-through;
+  color: $color--text-lighter;
+}
+
+.price-default + .price-sale {
+  margin-left: 8px;
+}

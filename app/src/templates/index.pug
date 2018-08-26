@@ -1,0 +1,17 @@
+extends ./views/_layout.pug
+block vars
+	- var pageTitle = 'Home'
+	- var bodyClass = 'home'
+	- var minimalHeader = true
+
+
+block content
+	//- Slideshow section
+	include sections/_slideshow.pug
+	//- Collections section
+	include sections/_collections.pug
+	+section-divider()
+	//- Image with text
+	include sections/_image-text.pug
+	//- Featured products
+	include sections/_featured-products.pug

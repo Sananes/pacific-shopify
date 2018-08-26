@@ -1,0 +1,130 @@
+extends ./views/_blank.pug
+block vars
+  - var pageTitle = 'Pacific Style guide'
+  - var bodyClass = 'style-guide'
+
+block content
+  .section-style-guide
+    h1 Pacific Style Guide
+    p Here you'll find all the available styles needed for the Pacific refresh
+    .style-guide-row.style-guide-row-of-3
+      h2 Forms
+      h4 Select
+      .style-guide-component
+        +select('Select', 'Label')
+        +label-component('Default')
+      .style-guide-component
+        +select('Select', 'Label', 'hover')
+        +label-component('Hover')
+      .style-guide-component
+        +select('Select', 'Label', 'focused hover')
+        +label-component('Focused')
+      .style-guide-component
+        +select('Select', 'Label', 'active hover', true)
+        +label-component('Active')
+
+    .style-guide-row.style-guide-row-of-3
+      h4 Inputs
+      .style-guide-component
+        label.label Label
+        input(placeholder="Placeholder")
+        +label-component('Default')
+      .style-guide-component
+        +select('Select', 'Label', 'hover')
+        +label-component('Hover')
+      .style-guide-component
+        +select('Select', 'Label', 'focused hover')
+        +label-component('Focused')
+      .style-guide-component
+        +select('Select', 'Label', 'active hover', true)
+        +label-component('Active')
+
+    .style-guide-row.style-guide-row-of-3
+      h2 Buttons
+      h4 Primary
+      .style-guide-component
+        button Button
+        +label-component('Default')
+      .style-guide-component
+        button.hover Button
+        +label-component('Hover')
+      .style-guide-component
+        button.focus Button
+        +label-component('Focused')
+      .style-guide-component
+        button.pressed Button
+        +label-component('Pressed')
+    .style-guide-row.style-guide-row-of-3
+      h4 Secondary
+      .style-guide-component
+        button.secondary Button
+        +label-component('Default')
+      .style-guide-component
+        button.secondary.hover Button
+        +label-component('Hover')
+      .style-guide-component
+        button.secondary.focus Button
+        +label-component('Focused')
+      .style-guide-component
+        button.secondary.pressed Button
+        +label-component('Pressed')
+    .style-guide-row.style-guide-row-of-3
+      h4 Medium Button
+      p The button sizes for small add up to 40px in height
+      .style-guide-component
+        button.button-medium Button
+        +label-component('Small Primary')
+      .style-guide-component
+        button.secondary.button-medium Button
+        +label-component('Small Secondary')
+    .style-guide-row.style-guide-row-of-3
+      h4 Small Button
+      p The button sizes for small add up to 36px in height
+      .style-guide-component
+        button.button-small Button
+        +label-component('Small Primary')
+      .style-guide-component
+        button.secondary.button-small Button
+        +label-component('Small Secondary')
+
+    .style-guide-row.style-guide-row-of-2
+      h2 Typography
+      p Here are a list of all the typography options
+      .style-guide-component
+        h1.heading-1 Heading 1
+        +label-component('$font--size-heading-1, 48px / 56px')
+      .style-guide-component
+        h2.heading-2 Heading 2
+        +label-component('$font--size-heading-2, 48px / 56px')
+      .style-guide-component
+        h3.heading-32 Heading 3
+        +label-component('$font--size-heading-3, 48px / 56px')
+      .style-guide-component
+        h4.heading-4 Heading 4
+        +label-component('$font--size-heading-4, 48px / 56px')
+      .style-guide-component
+        h5.heading-5 Heading 5
+        +label-component('$font--size-heading-5, 48px / 56px')
+      .style-guide-component
+        h6.heading-6 Heading 6
+        +label-component('$font--size-heading-6, 48px / 56px')
+      .style-guide-component
+        p.body-l Body L
+        +label-component('$font--size-text-large, 48px / 56px')
+      .style-guide-component
+        p Body
+        +label-component('$font--size-text, 48px / 56px')
+      .style-guide-component
+        p.body-s Body S
+        +label-component('$font--size-text-small, 48px / 56px')
+      .style-guide-component
+        h6.caption Captions
+        +label-component('$font--size-heading-6, 48px / 56px')
+      .style-guide-component
+        h6.caption Section headings
+        +label-component('$font--size-section-heading, 48px / 56px')
+      .style-guide-component
+        h6.menu-font Menu
+        +label-component('$font--size-section-heading, 48px / 56px')
+
+

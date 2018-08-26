@@ -1,0 +1,105 @@
+/* Base
+------------------------- */
+$font-size-base: 16;
+$line-height: 24px;
+$lines: 4px;
+
+$font--default: system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$font--body: 'Avenir Next', $font--default;
+$font--button: 'Futura', $font--default;
+$font--heading: 'Futura', $font--default;
+$font--captions: $font--body;
+
+
+/* Font Sizes */
+$font-size-smallest: em($font-size-base * 0.625); // 10px
+$font-size-smaller: em($font-size-base * 0.75); // 12px
+$font-size-small: em($font-size-base * 0.875); // 14px
+$font-size-body: em($font-size-base); // 16px
+$font-size-medium: em($font-size-base * 1.5); // 18px
+$font-size-large: em($font-size-base * 2.25); // 24px
+$font-size-x-large: em($font-size-base * 3); // 32px
+$font-size-xx-large: em($font-size-base * 4); // 48px
+
+$font--weight: 300;
+$font--weight-medium: 500;
+$font--weight-bold: 700;
+
+$border-radius: 3px;
+
+/* Colors
+------------------------- */
+
+/* General */
+$color--background: #fff; // User defined
+$color--placeholder: #f6f6f6;
+$color--accent: #4556C2; // User defined
+$color--border: #E5E5E5; // User defined
+$color--error: red; // User defined
+$color--menu: #18191C; // User defined
+$color--black: #000;
+$color--white: #fff;
+
+/* Text colors */
+$color--text: #69696A;
+$color--text-light: mix($color--text, $color--background, 80%);
+$color--text-lighter: mix($color--text, $color--background, 60%);
+$color--text-hover: darken($color--text, 10%);
+$color--heading: #18191C;
+$color--captions: $color--accent;
+
+/* Buttons */
+$color--button-primary-background: $color--accent ; // User definded
+$color--button-primary-background-hover: darken($color--accent, 10%);
+$color--button-primary-text: $color--background; // User defined
+
+$color--button-secondary-background: $color--background; // User defined
+$color--button-secondary-background-hover: mix($color--accent, $color--background, 5%);
+$color--button-secondary-border: $color--accent; // User defined
+$color--button-secondary-border-hover: darken($color--button-secondary-border, 5%);
+$color--button-secondary-text: $color--accent; // User defined
+$color--button-secondary-text-hover: darken($color--button-secondary-text, 15%);
+
+/* Inputs */
+$color--input-background: $color--background; // User defined
+$color--input-background-hover: mix($color--text, $color--background, 5%);
+$color--input-border: #D0D0D0; // User defined
+$color--input-border-hover: darken($color--input-border, 10%);
+
+/* Animations */
+$transition--easing: cubic-bezier(0.4, 0, 0.2, 1);
+$transition--short: 0.15s;
+$transition--medium: 0.25s;
+$transition--long: 0.35s;
+$transition--longer: 0.5s;
+
+// Horizontal Spacing
+$gutter-xs: rem($font-size-base) / 4; // 4px
+$gutter-small: rem($font-size-base); // 16px
+$gutter-medium: rem($font-size-base * 1.5); // 24px
+$gutter-large: rem($font-size-base * 2); // 32px
+$gutter-xl: rem($font-size-base * 3.5); // 56px
+
+// Vertical Spacing
+$space-xxx-small: rem($font-size-base * 0.25); // 4px
+$space-xx-small: rem($font-size-base * 0.5); // 8px
+$space-x-small: rem($font-size-base * 0.75); // 12px
+$space-small: rem($font-size-base); // 16px
+$space-medium: rem($font-size-base * 1.25); // 20px
+$space-large: rem($font-size-base * 1.5); // 24px
+$space-x-large: rem($font-size-base * 2); // 32px
+$space-xx-large: rem($font-size-base * 2.5); // 40px
+$space-xxx-large: rem($font-size-base * 3); // 48px
+
+/* Breakpoints
+------------------------- */
+$breakpoints: (
+  s     : em(540px),
+  m     : em(720px),
+  l     : em(1020px),
+  xl    : em(1021px),
+);
+
+/* Breakpoint values */
+$min-width: 320px;
+$max-width: 1260px;

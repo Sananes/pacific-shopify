@@ -1,0 +1,64 @@
+extends ./views/_layout.pug
+block vars
+	- var pageTitle = 'Pacific Product Page'
+	- var bodyClass = 'product-template'
+
+block content
+	.container
+		.breadcrumbs
+			ul.breadcrumbs-list
+				li
+					a(href="#") Home
+					+svg('chevron-right', null)
+				li
+					a(href="#") Collections
+					+svg('chevron-right', null)
+				li
+					a(href="#") Product name
+
+		.product-showcase
+			.product-thumbnails
+				ul.product-thumbnails-list
+					li
+						img(src="/assets/img/product-image.jpg", alt="")
+					li
+						img(src="/assets/img/product-image.jpg", alt="")
+					li
+						img(src="/assets/img/product-image.jpg", alt="")
+			figure.product-featured
+				img(src="/assets/img/product-image.jpg")
+		.product-information
+			.product-tile-group
+				h6.caption Tinker
+				h1.product-title Bresson
+			.product-price
+				span.price-default $299.99
+				span.price-sale $399.99
+			.product-sku SKU-44812
+			.product-options
+				form(action="#")
+					+select('Medium', 'Size')
+					+select('Orange', 'Color')
+					+select('Denim', 'Material')
+					.product-spb
+						button.secondary Add to Cart
+						button.action-button Buy now
+			.product-details
+				.accordian
+					.accordian-wrapper
+						span Description
+						+svg('plus', null, 'chevron')
+					.accordian-content
+						| Lorem, ipsum dolor sit amet consectetur adipisicing elit. In cum obcaecati reiciendis perspiciatis consequatur facilis. Aspernatur maxime nulla possimus unde, accusantium veritatis quidem vitae excepturi, dignissimos, repellat error nemo amet?
+				.accordian
+					.accordian-wrapper
+						span Product information
+						+svg('plus', null, 'chevron')
+					.accordian-content
+						| Lorem, ipsum dolor sit amet consectetur adipisicing elit. In cum obcaecati reiciendis perspiciatis consequatur facilis. Aspernatur maxime nulla possimus unde, accusantium veritatis quidem vitae excepturi, dignissimos, repellat error nemo amet?
+				.accordian
+					.accordian-wrapper
+						span Shipping
+						+svg('plus', null, 'chevron')
+					.accordian-content
+						| Lorem, ipsum dolor sit amet consectetur adipisicing elit. In cum obcaecati reiciendis perspiciatis consequatur facilis. Aspernatur maxime nulla possimus unde, accusantium veritatis quidem vitae excepturi, dignissimos, repellat error nemo amet?

@@ -1,0 +1,21 @@
+include ../mixins/_svgsprite.pug
+include ../mixins/_elements.pug
+
+doctype html
+html(lang="en")
+block vars
+head
+  meta(charset="utf-8")
+  title=pageTitle
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
+  link(rel="stylesheet" href="assets/css/screen.css")
+  script(src="https://joshuajohnson.co.uk/Animate/assets/js/dist/animate.js?version=1.3.2")
+  script(src="assets/js/script.js")
+
+
+body(class=bodyClass)
+
+  include _header.pug
+
+  
+  block content
