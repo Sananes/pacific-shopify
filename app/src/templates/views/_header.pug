@@ -1,3 +1,18 @@
+.header-mobile
+  .container
+    a.main-menu(href="#")
+      +svg('menu')
+    .logo
+      h1.store-title
+        a(href='#')
+          +svg('pacific-logo', '0 0 117 19', 'logo-svg')
+    .header-utilities
+      a.header-search(href="#")
+        +svg('search', '0 0 20 20')
+      a.header-cart(href="#")
+        +svg('shopping-basket')
+        |  0
+
 if minimalHeader
   .header.header-minimal
     .container.header-container

@@ -47,6 +47,10 @@
       @include breakpoint(s) {
         width: susy-span(all);
         margin-bottom: susy-gutter($susy-mobile);
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       @include breakpoint(xs) {

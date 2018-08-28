@@ -22,9 +22,9 @@ $font--input: $font--body;
 // Global theme settings will provide 3 types of spacing "Compact, Comfortable and Cozy"
 $compact: 0.825;
 $comfortable: 1; // Default
-$cozy: 1.125;
+$cozy: 1.1;
 
-$multiplier: $comfortable; // User defined
+$multiplier: $cozy; // User defined
 
 /* Font Sizes */
 $font-size-smallest: rem($font-size-base * $multiplier * 0.625); // 10px

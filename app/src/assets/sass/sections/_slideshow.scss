@@ -60,7 +60,6 @@
                  fadeIn 1s $transition--easing;
       transform: scale(1);
       transition: transform $transition--longer $transition--easing;
-
     }
   }
 
@@ -106,8 +105,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 32px;
+    bottom: $space-large;
     margin: 0 auto;
+
+    @include breakpoint(m) {
+      display: none;
+    }
   }
 
   .slideshow-pagination-item  {

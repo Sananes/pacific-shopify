@@ -6,6 +6,10 @@
   a {
     color: $color--heading;
   }
+
+  @include breakpoint(m) {
+    display: none;
+  }
 }
 
 .header-container {
@@ -153,5 +157,64 @@
   }
   svg {
     margin-left: $space-xxx-small;
+  }
+}
+
+.header-mobile {
+  display: none;
+  
+  @include breakpoint(m) {
+    display: block;
+  }
+
+  border-bottom: 1px solid $color--border;
+
+  .container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: $space-small;
+    padding-bottom: $space-small;
+  }
+
+  .main-menu {
+    width: 50px;
+  }
+
+  .logo {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      display: inline-block;
+      line-height: 1;
+      font-size: 0;
+      padding: 0;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    svg {
+      transform: scale(0.8);
+    }
+  }
+
+  .header-utilities {
+    flex: 1;
+    width: auto;
+
+    .header-search {
+      width: auto;
+      margin-right: $space-x-small;
+    }
+  }
+
+  a {
+    color: $color--menu;
   }
 }
