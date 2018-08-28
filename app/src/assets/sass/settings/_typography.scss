@@ -11,7 +11,7 @@ $font-size--heading-2: (
 );
 
 $font-size--heading-3: (
-  default : (em(24px), 1.5),
+  default : ($font-size-heading-3, 1.5),
   s       : (em(20px), 1.5),
 );
 

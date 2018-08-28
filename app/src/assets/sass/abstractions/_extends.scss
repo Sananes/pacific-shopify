@@ -6,15 +6,14 @@ button {
   font-weight: $font--weight-medium; // User defined
   text-transform: uppercase; // User defined
   letter-spacing: 1px; // User defined
-  line-height: 1;
-  padding: em(10px) em(12px); // 40px
+  padding: $button-padding-default; // 40px
   border: 1px solid transparent;
   background: $color--button-primary-background;
   color: $color--button-primary-text;
   border-radius: $border-radius;
   cursor: pointer;
-  min-height: 40px;
-  max-height: 40px;
+  min-height: $button-size-default;
+  max-height: $button-size-default;
   transition: color $transition--short $transition--easing,
               background-color $transition--medium $transition--easing,
               border $transition--medium $transition--easing;
@@ -59,22 +58,24 @@ button {
 
 %button-large,
 .button-large {
-  padding: 14px 16px;
-  min-height: 48px;
-  max-height: 48px;
+  @include font-size($font-size--body-small); // 14px
+  line-height: 1;
+  padding: $button-padding-large;
+  min-height: $button-size-large;
+  max-height: $button-size-large;
 
   @include breakpoint(m) {
-    padding: 10px 12px;
-    min-height: 40px;
-    max-height: 40px;
+    padding: $button-padding-default;
+    min-height: $button-size-default;
+    max-height: $button-size-default;
   }
 }
 
 %button-small,
 .button-small {
-  padding: 8px 12px; // 36px
-  min-height: 36px;
-  max-height: 36px;
+  padding: $button-padding-small; // 36px
+  min-height: $button-size-small;
+  max-height: $button-size-small;
 }
 
 %captions {
@@ -111,66 +112,34 @@ button {
 
 %container,
 .container {
-  @include container($width: 1280px);
-  padding: 0 32px;
+  @include container;
 
   @include breakpoint(m) {
-    padding-left: 24px;
-    padding-right: 24px;
+    @include container(all, $susy-tablet);
   }
-  
+
   @include breakpoint(s) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  
-  @include breakpoint(s) {
-    padding-left: 16px;
-    padding-right: 16px;
+    @include container(all, $susy-mobile);
   }
 
   @include breakpoint(xs) {
-    padding-left: 8px;
-    padding-right: 8px;
+    @include container(all, $susy-tiny);
   }
 }
 
 %section-spacing {
-  margin-top: 48px;
-  margin-bottom: 32px;
-
-  @include breakpoint(m) {
-    margin-top: calc(48px / 1.5);
-    margin-bottom: calc(32px / 1.5);
-  }
-
-  @include breakpoint(s) {
-    margin-top: calc(48px / 2);
-    margin-bottom: calc(32px / 2);
-  }
+  @include margin-bp(#{$space-xxx-large}, auto, #{$space-xxx-large}, auto);
 }
 
 .section-divider,
 %section-divider {
   @extend %container;
-  max-width: calc(1280px - 64px);
-  width: calc(100% - 64px);
+  @include margin-bp(#{$space-xxx-large}, auto, #{$space-xxx-large}, auto);
+  max-width: calc(1280px * #{$multiplier} - (#{susy-gutter($susy)} * 2));
+  width: calc(100% - (#{susy-gutter($susy)} * 2));
   height: 1px;
   line-height: 1px;
   border-top: 1px solid $color--border;
-  margin: 48px auto;
-
-  @include breakpoint(m) {
-    margin: calc(48px / 1.5) auto;
-    max-width: calc(1280px - 32px);
-    width: calc(100% - 32px);
-  }
-
-  @include breakpoint(s) {
-    margin: calc(48px / 2) auto;
-    max-width: calc(1280px - 16px);
-    width: calc(100% - 16px);
-  }
 }
 
 %section-title {
@@ -181,25 +150,18 @@ button {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 40px 0;
-
-    @include breakpoint(m) {
-      margin: calc(40px / 1.5) 0;
-    }
-
-    @include breakpoint(s) {
-      margin: calc(40px / 2) 0;
-    }
+    @include margin-bp(#{$space-xxx-large}, auto, #{$space-xxx-large}, auto);
   }
 }
 
 %input,
 .input {
   font-family: $font--body;
-  padding: 10px 12px;
+  padding: $input-padding-default;
   background: $color--input-background;
   border: 1px solid $color--input-border;
   border-radius: $border-radius;
+  line-height: 1.5;
   width: 100%;
   transition: color $transition--short $transition--easing,
               background-color $transition--medium $transition--easing,

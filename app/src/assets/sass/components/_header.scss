@@ -1,5 +1,6 @@
 .header {
   color: $color--heading;
+  background: $color--header-background;
   border-bottom: 1px solid $color--border;
 
   a {
@@ -9,8 +10,8 @@
 
 .header-container {
   max-width: span(12 of 12);
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: $space-medium;
+  padding-bottom: $space-medium;
 }
 
 .header-top {
@@ -50,13 +51,13 @@
 
   svg {
     fill: currentColor;
-    width: 20px;
-    height: 20px;
+    width: em(20px);
+    height: em(20px);
   }
 
   .header-minimal & {
     display: flex;
-    margin-right: 16px;
+    margin-right: $gutter-medium;
     width: auto;
 
     svg {
@@ -97,20 +98,20 @@
 
 .header-search {
   svg {
-    margin-right: 8px;
+    margin-right: $gutter-xs;
   }
 }
 
 .header-currency {
-  margin-right: 16px;
+  margin-right: $gutter-small;
   svg {
-    margin-left: 4px;
+    margin-left: $gutter-xs;
   }
 }
 
 .header-cart {
   svg {
-    margin-right: 4px;
+    margin-right: $gutter-xs;
   }
 }
 
@@ -118,7 +119,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: $space-small;
 
   .header-minimal & {
     padding-top: 0;
@@ -134,7 +135,7 @@
   padding: 0;
 
   & > li {
-    margin: 0px 8px;
+    margin: 0px $space-xx-small;
     
     &:first-child {
       margin-left: 0;
@@ -147,10 +148,10 @@
     display: flex;
     align-items: center;
     color: $color--menu;
-    padding: 0 8px;
+    padding: 0 $space-xx-small;
     font-weight: 500;
   }
   svg {
-    margin-left: 4px;
+    margin-left: $space-xxx-small;
   }
 }

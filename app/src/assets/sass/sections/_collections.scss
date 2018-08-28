@@ -17,7 +17,7 @@
 
     .collection-title {
       margin-top: 0;
-      margin-bottom: 8px;
+      margin-bottom: $space-xx-small;
     }
 
     .collection-title + 
@@ -43,6 +43,15 @@
 
     .collection-item {
       @include span(1 of 2);
+
+      @include breakpoint(s) {
+        width: susy-span(all);
+        margin-bottom: susy-gutter($susy-mobile);
+      }
+
+      @include breakpoint(xs) {
+        margin-bottom: susy-gutter($susy-tiny);
+      }
     }
   }
 }

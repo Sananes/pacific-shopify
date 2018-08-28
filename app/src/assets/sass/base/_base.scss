@@ -14,9 +14,8 @@ body {
 
 body {
   font-family: 'Avenir Next', system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  font-size: 16px;
-  line-height: $line-height;
   @include font-size($font-size--body);
+  line-height: $line-height;
   color: $color--text;
 }
 
@@ -145,7 +144,7 @@ select {
     display: inline-flex;
     align-items: center;
     border: 1px solid $color--input-border;
-    padding: 5px 8px 5px 12px;
+    padding: $input-padding-default;
     background: $color--input-background;
     vertical-align: middle;
     border-radius: $border-radius;
@@ -248,6 +247,18 @@ select {
 .section + 
 .section.has-section-title {
   margin-top: 48px;
+
+  @include breakpoint(m) {
+    margin-top: calc(48px / 1.5);
+  }
+
+  @include breakpoint(s) {
+    margin-top: calc(48px / 2);
+  }
+
+  @include breakpoint(xs) {
+    margin-top: calc(48px / 2.5);
+  }
 }
 
 .section-divider + .section {

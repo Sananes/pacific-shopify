@@ -4,6 +4,10 @@
   .image-with-text-container {
     display: flex;
     align-items: center;
+
+    @include breakpoint(m) {
+      display: block;
+    }
   }
 
   .image-with-text-content {
@@ -15,6 +19,24 @@
     button {
       @extend %button-large;
     }
+    
+    @include breakpoint(m) {
+      float: none;
+      width: 100%;
+      padding-bottom: susy-gutter($susy-tablet) * 2;
+    }
+
+    @include breakpoint(s) {
+      float: none;
+      width: 100%;
+      padding-bottom: susy-gutter($susy-mobile) * 2;
+    }
+
+    @include breakpoint(xs) {
+      float: none;
+      width: 100%;
+      padding-bottom: susy-gutter($susy-tiny) * 2;
+    }
   }
 }
 
@@ -22,6 +44,21 @@
   @include span(6 of 12);
   margin-right: 0;
   object-fit: cover;
+
+
+  @include breakpoint(m) {
+    float: none;
+    width: 100%;
+    margin-bottom: susy-gutter($susy-tablet);
+  }
+
+  @include breakpoint(s) {
+    margin-bottom: susy-gutter($susy-mobile);
+  }
+
+  @include breakpoint(xs) {
+    margin-bottom: susy-gutter($susy-tiny);
+  }
 
   img {
     width: 100%;
