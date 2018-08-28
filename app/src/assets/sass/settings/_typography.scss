@@ -7,17 +7,17 @@ $font-size--heading-1: (
 
 $font-size--heading-2: (
   default : (em(32px), 1.25),
-  l       : (em(24px), 1.5),
+  l       : (em(24px), 1.2),
 );
 
 $font-size--heading-3: (
-  default : ($font-size-heading-3, 1.5),
-  s       : (em(20px), 1.5),
+  default : (em(24px), 1.2),
+  s       : (em(20px), 1.2),
 );
 
 $font-size--heading-4: (
-  default : (em(18px), 1.5),
-  s       : (em(16px), 1.5),
+  default : (em(18px), 1.2),
+  s       : (em(16px), 1.2),
 );
 
 $font-size--heading-5: (

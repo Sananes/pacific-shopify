@@ -185,16 +185,16 @@
   }
 
   @include breakpoint(xs) {
-    margin-top: calc(#{$top} / 2.5);
+    margin-top: calc(#{$top} / 2);
     @if $right, $left == "auto" {
       margin-right: $right;
       margin-left: $left;
     }
     @else {
-      margin-right: calc(#{$right} / 2.5);
-      margin-left: calc(#{$left} / 2.5);
+      margin-right: calc(#{$right} / 2);
+      margin-left: calc(#{$left} / 2);
     }
-    margin-bottom: calc(#{$bottom} / 2.5);
+    margin-bottom: calc(#{$bottom} / 2);
   }
 }
 // Make spacing mixin

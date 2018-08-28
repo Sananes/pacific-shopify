@@ -20,25 +20,24 @@ $font--input: $font--body;
 
 // Multiplier scale
 // Global theme settings will provide 3 types of spacing "Compact, Comfortable and Cozy"
-$compact: 0.825;
+$compact: 0.875;
 $comfortable: 1; // Default
-$cozy: 1.1;
+$cozy: 1.2;
 
-$multiplier: $cozy; // User defined
+$multiplier: $comfartable; // User defined
 
 /* Font Sizes */
-$font-size-smallest: rem($font-size-base * $multiplier * 0.625); // 10px
-$font-size-smaller: rem($font-size-base * $multiplier * 0.75); // 12px
-$font-size-small: rem($font-size-base * $multiplier * 0.875); // 14px
+$font-size-body-smallest: rem($font-size-base * 0.625); // 10px
+$font-size-body-smaller: rem($font-size-base * 0.75); // 12px
+$font-size-body-small: rem($font-size-base * 0.875); // 14px
 $font-size-body: rem($font-size-base); // 16px
-$font-size-medium: rem($font-size-base * $multiplier * 1.5); // 18px
+$font-size-body-medium: rem($font-size-base * 1.5); // 18px
 
-$font-size-heading-1: rem($font-size-base * $multiplier * 4); // 48px
-$font-size-heading-2: rem($font-size-base * $multiplier * 3); // 32px
-$font-size-heading-3: rem($font-size-base * $multiplier * 2.25); // 24px
-$font-size-heading-4: rem($font-size-base * $multiplier * 1.5); // 18px
+$font-size-heading-1: rem($font-size-base * 3); // 48px
+$font-size-heading-2: rem($font-size-base * 2); // 32px
+$font-size-heading-3: rem($font-size-base * 1.5); // 24px
+$font-size-heading-4: rem($font-size-base * 1.125); // 18px
 $font-size-heading-5: rem($font-size-base); // 16px
-$font-size-heading-6: rem($font-size-base * $multiplier * 0.875);
 
 $font--weight: 300;
 $font--weight-medium: 500;
@@ -100,11 +99,12 @@ $gutter-medium: rem($font-size-base * ($multiplier * 1.5)); // 24px
 $gutter-large: rem($font-size-base * 2); // 32px
 $gutter-xl: rem($font-size-base * 3.5); // 56px
 
-// Vertical Spacing
+
+// Modifier Spacing
 $space-xxx-small: rem($font-size-base * ($multiplier * 0.25)); // 4px
 $space-xx-small: rem($font-size-base * ($multiplier * 0.5)); // 8px
 $space-x-small: rem($font-size-base * ($multiplier * 0.75)); // 12px
-$space-small: rem($font-size-base * ($multiplier)); // 16px
+$space-small: rem($font-size-base * $multiplier); // 16px
 $space-medium: rem($font-size-base * ($multiplier * 1.25)); // 20px
 $space-large: rem($font-size-base * ($multiplier * 1.5)); // 24px
 $space-x-large: rem($font-size-base * ($multiplier * 2)); // 32px
@@ -116,7 +116,7 @@ $button-size-large: $space-xxx-large;
 $button-size-default: $space-xx-large;
 $button-size-small: calc(#{$space-x-large} + #{$space-xxx-small});
 
-$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px)
+$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px) 21px
 $button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-small; // 10px 12px (40px)
 $button-padding-small: $space-xx-small $space-x-small; // 8px 12px (36px)
 

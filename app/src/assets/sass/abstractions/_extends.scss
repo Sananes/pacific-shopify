@@ -12,8 +12,6 @@ button {
   color: $color--button-primary-text;
   border-radius: $border-radius;
   cursor: pointer;
-  min-height: $button-size-default;
-  max-height: $button-size-default;
   transition: color $transition--short $transition--easing,
               background-color $transition--medium $transition--easing,
               border $transition--medium $transition--easing;
@@ -70,8 +68,6 @@ button {
   @include font-size($font-size--body-small); // 14px
   line-height: 1;
   padding: $button-padding-large;
-  min-height: $button-size-large;
-  max-height: $button-size-large;
 
   @include breakpoint(m) {
     padding: $button-padding-default;
@@ -111,7 +107,7 @@ button {
   }
 
   .title {
-    margin-bottom: 8px;
+    margin-bottom: $space-xx-small;
   }
 
   .title + p {
