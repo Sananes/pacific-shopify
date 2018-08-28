@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const config = require('../config/templates');
+const requireGlob = require('require-glob');
 const errorHandler = require('../lib/errorHandler');
 
 const templatesTask = () => gulp.src(config.source)
@@ -29,6 +30,9 @@ const templatesTask = () => gulp.src(config.source)
 
     // Use gulp plumber to prevent a hanging watch-task on error
     .pipe(plugins.plumber())
+
+    // Pull in some data (overrides pug locals)
+    .pipe(plugins.data(() => requireGlob('../../app/src/data/**/*.js', { bustCache: true })))
 
     // Output HTML from pug
     .pipe(plugins.pug({ pretty: true }))

@@ -1,0 +1,32 @@
+.video-section-content-container {
+  position: relative;
+}
+
+.video-section-image-overlay {
+  object-fit: cover;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    vertical-align: bottom;
+  }
+}
+
+.video-section-content {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+
+  .button-text {
+    margin: 0 auto;
+  }
+
+  > * {
+    margin: 0;
+    color: $color--white;
+    padding: 0;
+  }
+}

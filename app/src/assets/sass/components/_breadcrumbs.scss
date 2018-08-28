@@ -4,7 +4,7 @@
 
 .breadcrumbs-list {
   display: flex;
-  padding: 16px 0;
+  padding: $space-small 0;
 
   > li {
     display: flex;
@@ -13,9 +13,9 @@
 
     svg {
       color: $color--text-lighter;
-      margin: 0 4px;
-      width: 16px;
-      height: 16px;
+      margin: 0 $space-xxx-small;
+      width: rem(16px);
+      height: rem(16px);
       fill: none;
     }
 

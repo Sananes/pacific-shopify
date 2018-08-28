@@ -246,19 +246,12 @@ select {
 
 .section + 
 .section.has-section-title {
-  margin-top: 48px;
+  @include margin-bp($space-xxx-large, null, null, null)
+}
 
-  @include breakpoint(m) {
-    margin-top: calc(48px / 1.5);
-  }
-
-  @include breakpoint(s) {
-    margin-top: calc(48px / 2);
-  }
-
-  @include breakpoint(xs) {
-    margin-top: calc(48px / 2.5);
-  }
+.section.has-section-title + 
+.section.has-section-title {
+  @include margin-bp($space-xxx-large, null, null, null)
 }
 
 .section-divider + .section {

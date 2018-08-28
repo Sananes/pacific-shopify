@@ -2,7 +2,7 @@
 
   .product-price {
     @include font-size($font-size--body-large);
-    margin-top: 12px;
+    margin-top: $space-x-small;
   }
 }
 
@@ -36,7 +36,7 @@
   .product-featured {
     float: left;
     width: calc(#{span(11 of 12)});
-    margin-left: 24px;
+    margin-left: $gutter-medium;
 
     img {
       width: 100%;
@@ -47,7 +47,7 @@
 .product-information {
   float: right;
   width: span(4 of 12);
-  margin-left: calc(#{span(4 of 12)}) - 32px;
+  margin-left: calc(#{span(4 of 12)}) - span-gutter($susy);
 
   .caption {
     margin-top: 0;
@@ -56,15 +56,15 @@
 
 .product-options {
   margin: 20px auto 25px auto;
-  padding-top: 15px;
+  padding-top: $space-small;
   border-top: 1px solid $color--border;
 
   .custom-select {
-    margin-bottom: 15px;
+    margin-bottom: $space-small;
   }
 
   .custom-select + .product-spb {
-    margin-top: 25px;
+    margin-top: $space-medium;
   }
 
   .custom-select-wrapper {
@@ -74,7 +74,7 @@
 
 .product-title {
   @extend %heading-2;
-  margin-bottom: 8px;
+  margin-bottom: $space-xx-small;
 }
 
 .caption + .product-title {
@@ -88,11 +88,11 @@
   button {
     @extend %button;
     flex: 1;
-    margin-right: 6px;
+    margin-right: $space-xx-small;
   }
 
   button + button {
-    margin-left: 6px;
+    margin-left: $space-xx-small;
     margin-right: auto;
   }
 
@@ -102,5 +102,5 @@
 }
 
 .product-sku {
-  margin-top: 12px;
+  margin-top: $space-x-small;
 }

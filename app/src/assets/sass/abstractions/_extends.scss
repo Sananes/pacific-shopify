@@ -51,6 +51,15 @@ button {
   }
 }
 
+%button-text,
+.button-text {
+  display: inline-flex;
+
+  svg {
+    margin-right: $space-xxx-small;
+  }
+}
+
 %button-medium,
 .button-medium {
 

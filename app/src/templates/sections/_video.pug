@@ -1,0 +1,13 @@
+.video-section.section.has-section-title
+  .video-section-container.container
+    .video-section-title.section-title
+      h2.section-heading!= video.title
+    .video-section-content-container    
+      figure.video-section-image-overlay
+        img(src='/assets/img/product-video.jpg')
+      .video-section-content
+        a.button-text(href="#")
+          +svg('play')
+          | Watch video now
+        h1.video-section-heading.title Inside the sound studio
+    
