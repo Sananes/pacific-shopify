@@ -4,20 +4,27 @@ $font-size-base: 16;
 $line-height: 24px;
 $lines: 4px;
 
+// Font settings
 $font--default: system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-$font--body: 'Avenir Next', $font--default;
-$font--button: 'Futura', $font--default;
-$font--heading: 'Futura', $font--default;
-$font--captions: $font--body;
+$font--body: 'Avenir Next', $font--default; // User defined
+$font--button: 'Futura', $font--default; // User defined
+$font--heading: 'Futura', $font--default; // User defined
+$font--captions: $font--body; // User defined
+$font--store-title: $font--heading; // User defined
+$font--section-headings: $font--body; // User defined
+$font--menu: $font--body; // User definied
+
+$font--label: $font--body;
+$font--input: $font--body;
 
 
 // Multiplier scale
-// Theme settings will provide 3 settings "Compact, Comfortable and Cozy"
+// Global theme settings will provide 3 types of spacing "Compact, Comfortable and Cozy"
 $compact: 0.825;
-$comfortable: 1;
+$comfortable: 1; // Default
 $cozy: 1.125;
 
-$multiplier: $compact; // User defined
+$multiplier: $comfortable; // User defined
 
 /* Font Sizes */
 $font-size-smallest: rem($font-size-base * $multiplier * 0.625); // 10px
@@ -109,8 +116,8 @@ $button-size-large: $space-xxx-large;
 $button-size-default: $space-xx-large;
 $button-size-small: calc(#{$space-x-large} + #{$space-xxx-small});
 
-$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $space-small; // 14px 16px (48px)
-$button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-x-small; // 10px 12px (40px)
+$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px)
+$button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-small; // 10px 12px (40px)
 $button-padding-small: $space-xx-small $space-x-small; // 8px 12px (36px)
 
 // Input sizes
@@ -131,4 +138,4 @@ $breakpoints: (
 
 /* Breakpoint values */
 $min-width: 320px;
-$max-width: 1260px;
+$max-width: 1280px;

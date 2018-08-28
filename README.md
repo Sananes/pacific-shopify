@@ -1,1 +1,168 @@
 # Pacific Style Guide
+
+Here you'll find the source of truth for the Pacific style guide.
+
+## New color settings:
+- Menu text
+- Header background
+- Input background
+- Input borders
+- Input text
+
+## New font settings:
+We are introducing a new Base size for typography. This will allow the user to choose between "Small (14px), Medium (16px), Large (18px)".
+
+In general we've added the ability to adjust letter spacing for individual typography options. These include:
+- Headings
+- Menu
+- Buttons
+- Captions
+- Section Headings
+
+## New global spacing settings:
+The theme will have a modular scale built in. This will allow merchants to choose based on 3 options (Compact, Comfortable, Cozy). These values will adjust the general size of spacing across the theme.
+
+## Variables
+```
+/* Base
+------------------------- */
+$font-size-base: 16;
+$line-height: 24px;
+$lines: 4px;
+
+// Font settings
+$font--default: system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$font--body: 'Avenir Next', $font--default; // User defined
+$font--button: 'Futura', $font--default; // User defined
+$font--heading: 'Futura', $font--default; // User defined
+$font--captions: $font--body; // User defined
+$font--store-title: $font--heading; // User defined
+$font--section-headings: $font--body; // User defined
+$font--menu: $font--body; // User definied
+
+$font--label: $font--body;
+$font--input: $font--body;
+
+
+// Multiplier scale
+// Global theme settings will provide 3 types of spacing "Compact, Comfortable and Cozy"
+$compact: 0.825;
+$comfortable: 1; // Default
+$cozy: 1.125;
+
+$multiplier: $comfortable; // User defined
+
+/* Font Sizes */
+$font-size-smallest: rem($font-size-base * $multiplier * 0.625); // 10px
+$font-size-smaller: rem($font-size-base * $multiplier * 0.75); // 12px
+$font-size-small: rem($font-size-base * $multiplier * 0.875); // 14px
+$font-size-body: rem($font-size-base); // 16px
+$font-size-medium: rem($font-size-base * $multiplier * 1.5); // 18px
+
+$font-size-heading-1: rem($font-size-base * $multiplier * 4); // 48px
+$font-size-heading-2: rem($font-size-base * $multiplier * 3); // 32px
+$font-size-heading-3: rem($font-size-base * $multiplier * 2.25); // 24px
+$font-size-heading-4: rem($font-size-base * $multiplier * 1.5); // 18px
+$font-size-heading-5: rem($font-size-base); // 16px
+$font-size-heading-6: rem($font-size-base * $multiplier * 0.875);
+
+$font--weight: 300;
+$font--weight-medium: 500;
+$font--weight-bold: 700;
+
+$border-radius: 3px;
+
+/* Colors
+------------------------- */
+
+/* General */
+$color--background: #fff; // User defined
+$color--placeholder: #f6f6f6;
+$color--header-background: #fff; // User defined
+$color--accent: #4556C2; // User defined
+$color--border: #E5E5E5; // User defined
+$color--error: red; // User defined
+$color--menu: #18191C; // User defined
+$color--black: #000;
+$color--white: #fff;
+
+/* Text colors */
+$color--text: #69696A; // User definied
+$color--text-light: mix($color--text, $color--background, 80%);
+$color--text-lighter: mix($color--text, $color--background, 60%);
+$color--text-hover: darken($color--text, 10%);
+$color--heading: #18191C; // User defined
+$color--captions: $color--accent; // User defined
+
+/* Buttons */
+$color--button-primary-background: $color--accent; // User definded
+$color--button-primary-background-hover: darken($color--accent, 10%);
+$color--button-primary-text: $color--background; // User defined
+
+$color--button-secondary-background: $color--background; // User defined
+$color--button-secondary-background-hover: mix($color--accent, $color--background, 5%);
+$color--button-secondary-border: $color--accent; // User defined
+$color--button-secondary-border-hover: darken($color--button-secondary-border, 5%);
+$color--button-secondary-text: $color--accent; // User defined
+$color--button-secondary-text-hover: darken($color--button-secondary-text, 15%);
+
+/* Inputs */
+$color--input-background: $color--background; // User defined
+$color--input-background-hover: mix($color--text, $color--background, 5%);
+$color--input-border: #D0D0D0; // User defined
+$color--input-border-hover: darken($color--input-border, 10%);
+
+/* Animations */
+$transition--easing: cubic-bezier(0.4, 0, 0.2, 1);
+$transition--short: 0.15s;
+$transition--medium: 0.25s;
+$transition--long: 0.35s;
+$transition--longer: 0.5s;
+
+// Horizontal Spacing
+$gutter-xs: rem($font-size-base) / 4; // 4px
+$gutter-small: rem($font-size-base * $multiplier); // 16px
+$gutter-medium: rem($font-size-base * ($multiplier * 1.5)); // 24px
+$gutter-large: rem($font-size-base * 2); // 32px
+$gutter-xl: rem($font-size-base * 3.5); // 56px
+
+// Vertical Spacing
+$space-xxx-small: rem($font-size-base * ($multiplier * 0.25)); // 4px
+$space-xx-small: rem($font-size-base * ($multiplier * 0.5)); // 8px
+$space-x-small: rem($font-size-base * ($multiplier * 0.75)); // 12px
+$space-small: rem($font-size-base * ($multiplier)); // 16px
+$space-medium: rem($font-size-base * ($multiplier * 1.25)); // 20px
+$space-large: rem($font-size-base * ($multiplier * 1.5)); // 24px
+$space-x-large: rem($font-size-base * ($multiplier * 2)); // 32px
+$space-xx-large: rem($font-size-base * ($multiplier * 2.5)); // 40px
+$space-xxx-large: rem($font-size-base * ($multiplier * 3)); // 48px
+
+// Button sizes
+$button-size-large: $space-xxx-large;
+$button-size-default: $space-xx-large;
+$button-size-small: calc(#{$space-x-large} + #{$space-xxx-small});
+
+$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px)
+$button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-small; // 10px 12px (40px)
+$button-padding-small: $space-xx-small $space-x-small; // 8px 12px (36px)
+
+// Input sizes
+$input-size-large: $button-size-large;
+$input-size-default: $button-size-default;
+$input-size-small: $button-size-small;
+
+$input-padding-default: calc(7px * #{$multiplier}) $space-xx-small calc(7px * #{$multiplier}) $space-x-small; // 4px 8px 4px 12px; (40px)
+
+/* Breakpoints
+------------------------- */
+$breakpoints: (
+  s     : em(540px),
+  m     : em(720px),
+  l     : em(1020px),
+  xl    : em(1021px),
+);
+
+/* Breakpoint values */
+$min-width: 320px;
+$max-width: 1280px;
+```
