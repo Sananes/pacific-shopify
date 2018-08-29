@@ -1,60 +1,56 @@
 /* Typographic scale
 ------------------------- */
 
+/* Heading */
+
 $font-size--heading-1: (
-  default : (rem(40px), 1.2), // $font-size-heading-1, 1.2
-  l       : (rem(32px), 1.2), // $font-size-heading-2, 1.2
+  default : (rem($font-size-base * 2.5), 1.2), // $font-size-heading-1, 1.2
+  l       : (rem($font-size-base * 2), 1.2), // $font-size-heading-2, 1.2
 );
 
 $font-size--heading-2: (
-  default : (rem(32px), 1.2), // $font-size-heading-2, 1.2
-  l       : (rem(24px), 1.2), // $font-size-heading-3, 1.2
+  default : (rem($font-size-base * 2), 1.2), // $font-size-heading-2, 1.2
+  l       : (rem($font-size-base * 1.5), 1.2), // $font-size-heading-3, 1.2
 );
 
 $font-size--heading-3: (
-  default : (rem(24px), 1.2), // $font-size-heading-3, 1.2
-  s       : (rem(20px), 1.2), // $font-size-heading-2, 1.2
+  default : (rem($font-size-base * 1.5), 1.2), // $font-size-heading-3, 1.2
+  s       : (rem($font-size-base * 1.125), 1.2), // $font-size-heading-2, 1.2
 );
 
 $font-size--heading-4: (
-  default : (rem(18px), 1.2), // $font-size-heading-4, 1.2
-  s       : (rem(16px), 1.2), // $font-size-heading-3, 1.2
+  default : (rem($font-size-base * 1.125), 1.2), // $font-size-heading-4, 1.2
+  s       : (rem($font-size-base), 1.2), // $font-size-heading-3, 1.2
 );
 
 $font-size--heading-5: (
-  default : (rem(16px), 1.2) // $font-size-heading-5, 1.2
+  default : (rem($font-size-base), 1.2) // $font-size-heading-5, 1.2
 );
 
+$font-size--heading-6: (
+  default : (rem($font-size-base * 0.875), 1.2) // $font-size-heading-6, 1.2
+);
+
+/* Body */
+
 $font-size--body-large: (
-  default : (rem(18px), 1.75), // $font-size-body-large, 1.75
-  s       : (rem(16px), 1.75), // $font-size-body, 1.75
+  default : (rem($font-size-base * 1.125), 1.75), // $font-size-body-large, 1.75
+  s       : (rem($font-size-base), 1.75), // $font-size-body, 1.75
 );
 
 $font-size--body: (
-  default : (rem(16px), 1.75), // $font-size-body, 1.75
-  s       : (rem(14px), 1.75), // $font-size-body-small, 1.75
+  default : (rem($font-size-base), 1.75), // $font-size-body, 1.75
+  s       : (rem($font-size-base * 0.875), 1.75), // $font-size-body-small, 1.75
 );
 
 $font-size--body-small: (
-  default : (rem(14px), 1.75), // $font-size-body-small, 1.75
+  default : (rem($font-size-base * 0.875), 1.75), // $font-size-body-small, 1.75
 );
 
 $font-size--body-smaller: (
-  default : (rem(12px), 1.75), // $font-size-body-smaller, 1.75
+  default : (rem($font-size-base * 0.75), 1.75), // $font-size-body-smaller, 1.75
 );
 
 $font-size--body-smallest: (
-  default : (rem(10px), 1.75), // $font-size-body-smallest, 1.75
-);
-
-$font-size--button-large: (
-  default : (rem(14px), 1.2), // unique sizing
-);
-
-$font-size--button: (
-  default : (rem(12px), 1.2), // unique sizing
-);
-
-$font-size--section-heading: (
-  default : (rem(14px), 1.2), // Unique sizing
+  default : (rem($font-size-base * 0.625), 1.75), // $font-size-body-smallest, 1.75
 );

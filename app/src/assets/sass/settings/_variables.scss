@@ -1,7 +1,7 @@
 /* Base
 ------------------------- */
 $font-size-base: 16;
-$line-height: 24px;
+$line-height: 1.75;
 $lines: 4px;
 
 // Font settings
@@ -27,17 +27,18 @@ $cozy: 1.2;
 $multiplier: $comfortable; // User defined
 
 /* Font Sizes */
-$font-size-body-smallest: rem($font-size-base * 0.625); // 10px
-$font-size-body-smaller: rem($font-size-base * 0.75); // 12px
-$font-size-body-small: rem($font-size-base * 0.875); // 14px
+$font-size-body-large: rem($font-size-base * 1.125); // 18px
 $font-size-body: rem($font-size-base); // 16px
-$font-size-body-large: rem($font-size-base * 1.5); // 18px
+$font-size-body-small: rem($font-size-base * 0.875); // 14px
+$font-size-body-smaller: rem($font-size-base * 0.75); // 12px
+$font-size-body-smallest: rem($font-size-base * 0.625); // 10px
 
-$font-size-heading-1: rem($font-size-base * 3); // 48px
+$font-size-heading-1: rem($font-size-base * 2.5); // 40px
 $font-size-heading-2: rem($font-size-base * 2); // 32px
 $font-size-heading-3: rem($font-size-base * 1.5); // 24px
 $font-size-heading-4: rem($font-size-base * 1.125); // 18px
 $font-size-heading-5: rem($font-size-base); // 16px
+$font-size-heading-6: rem($font-size-base * 0.875); // 14px
 
 $font--weight: 300;
 $font--weight-medium: 500;
@@ -122,9 +123,9 @@ $button-size-large: $space-xxx-large;
 $button-size-default: $space-xx-large;
 $button-size-small: calc(#{$space-x-large} + #{$space-xxx-small});
 
-$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px) 21px
-$button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-small; // 10px 12px (40px)
-$button-padding-small: $space-xx-small $space-x-small; // 8px 12px (36px)
+$button-padding-large: $space-x-small $space-medium; // 12px 20px
+$button-padding-default: $space-xx-small $space-small; // 8px 16px
+$button-padding-small: rem($font-size-base * ($multiplier * 0.375)) $space-x-small; // 6px 12px (36px)
 
 // Input sizes
 $input-size-large: $button-size-large;

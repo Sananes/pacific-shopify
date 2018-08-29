@@ -1,11 +1,12 @@
 @import '../settings/variables';
 %button,
 button {
-  @include font-size($font-size--button);
+  @include font-size($font-size--body-small);
   font-family: $font--button;
   font-weight: $font--weight-medium; // User defined
   text-transform: uppercase; // User defined
   letter-spacing: 1px; // User defined
+  line-height: 1.5;
   padding: $button-padding-default; // 40px
   border: 1px solid transparent;
   background: $color--button-primary-background;
@@ -26,7 +27,6 @@ button {
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
     border-color: transparent;
   }
-  
 }
 
 %button-alt,
@@ -65,22 +65,23 @@ button {
 
 %button-large,
 .button-large {
-  @include font-size($font-size--button-large); // 14px
-  line-height: 1;
+  @include font-size($font-size--body-small); // 14px
+  line-height: 1.5;
   padding: $button-padding-large;
 
   @include breakpoint(m) {
     padding: $button-padding-default;
-    min-height: $button-size-default;
-    max-height: $button-size-default;
+    // min-height: $button-size-default;
+    // max-height: $button-size-default;
   }
 }
 
 %button-small,
 .button-small {
-  padding: $button-padding-small; // 36px
-  min-height: $button-size-small;
-  max-height: $button-size-small;
+  @include font-size($font-size--body-smaller); // 12px
+  padding: $button-padding-small;
+  // min-height: $button-size-small;
+  // max-height: $button-size-small;
 }
 
 %captions {
@@ -151,7 +152,7 @@ button {
   border-top: 1px solid $color--border;
 
   .section-heading {
-    @include font-size($font-size--section-heading);
+    @include font-size($font-size--heading-6);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
