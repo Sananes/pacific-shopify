@@ -24,7 +24,7 @@ $compact: 0.875;
 $comfortable: 1; // Default
 $cozy: 1.2;
 
-$multiplier: $comfartable; // User defined
+$multiplier: $comfortable; // User defined
 
 /* Font Sizes */
 $font-size-body-smallest: rem($font-size-base * 0.625); // 10px
@@ -69,7 +69,7 @@ $color--text-light: mix($color--text, $color--background, 80%);
 $color--text-lighter: mix($color--text, $color--background, 60%);
 $color--text-hover: morph($color--text);
 $color--heading: #18191C; // User defined
-$color--captions: $color--accent; // User defined
+$color--captions: #3B4857; // User defined
 
 /* Buttons */
 $color--button-primary-background: $color--accent; // User defined
@@ -99,7 +99,7 @@ $transition--long: 0.35s;
 $transition--longer: 0.5s;
 
 // Horizontal Spacing
-$gutter-xs: rem($font-size-base) / 4; // 4px
+$gutter-xs: rem($font-size-base * $multiplier) / 4; // 4px
 $gutter-small: rem($font-size-base * $multiplier); // 16px
 $gutter-medium: rem($font-size-base * ($multiplier * 1.5)); // 24px
 $gutter-large: rem($font-size-base * 2); // 32px
