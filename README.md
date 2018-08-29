@@ -35,10 +35,10 @@ $font--default: system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Robo
 $font--body: 'Avenir Next', $font--default; // User defined
 $font--button: 'Futura', $font--default; // User defined
 $font--heading: 'Futura', $font--default; // User defined
-$font--captions: $font--body; // User defined
-$font--store-title: $font--heading; // User defined
-$font--section-headings: $font--body; // User defined
-$font--menu: $font--body; // User definied
+$font--captions: 'Avenir Next', $font--default; // User defined
+$font--store-title: 'Futura', $font--default; // User defined
+$font--section-headings: 'Avenir Next', $font--default; // User defined
+$font--menu: 'Avenir Next', $font--default; // User definied
 
 $font--label: $font--body;
 $font--input: $font--body;
@@ -46,25 +46,24 @@ $font--input: $font--body;
 
 // Multiplier scale
 // Global theme settings will provide 3 types of spacing "Compact, Comfortable and Cozy"
-$compact: 0.825;
+$compact: 0.875;
 $comfortable: 1; // Default
-$cozy: 1.125;
+$cozy: 1.2;
 
 $multiplier: $comfortable; // User defined
 
 /* Font Sizes */
-$font-size-smallest: rem($font-size-base * $multiplier * 0.625); // 10px
-$font-size-smaller: rem($font-size-base * $multiplier * 0.75); // 12px
-$font-size-small: rem($font-size-base * $multiplier * 0.875); // 14px
+$font-size-body-smallest: rem($font-size-base * 0.625); // 10px
+$font-size-body-smaller: rem($font-size-base * 0.75); // 12px
+$font-size-body-small: rem($font-size-base * 0.875); // 14px
 $font-size-body: rem($font-size-base); // 16px
-$font-size-medium: rem($font-size-base * $multiplier * 1.5); // 18px
+$font-size-body-large: rem($font-size-base * 1.5); // 18px
 
-$font-size-heading-1: rem($font-size-base * $multiplier * 4); // 48px
-$font-size-heading-2: rem($font-size-base * $multiplier * 3); // 32px
-$font-size-heading-3: rem($font-size-base * $multiplier * 2.25); // 24px
-$font-size-heading-4: rem($font-size-base * $multiplier * 1.5); // 18px
+$font-size-heading-1: rem($font-size-base * 3); // 48px
+$font-size-heading-2: rem($font-size-base * 2); // 32px
+$font-size-heading-3: rem($font-size-base * 1.5); // 24px
+$font-size-heading-4: rem($font-size-base * 1.125); // 18px
 $font-size-heading-5: rem($font-size-base); // 16px
-$font-size-heading-6: rem($font-size-base * $multiplier * 0.875);
 
 $font--weight: 300;
 $font--weight-medium: 500;
@@ -78,39 +77,45 @@ $border-radius: 3px;
 /* General */
 $color--background: #fff; // User defined
 $color--placeholder: #f6f6f6;
-$color--header-background: #fff; // User defined
 $color--accent: #4556C2; // User defined
+$color--accent-hover: morph($color--accent);
 $color--border: #E5E5E5; // User defined
 $color--error: red; // User defined
-$color--menu: #18191C; // User defined
 $color--black: #000;
 $color--white: #fff;
 
+/* Header */
+$color--header-text: #18191C; // User defined
+$color--header-text-hover: morph($color--header-text);
+$color--header-background: #fff; // User defined
+
 /* Text colors */
-$color--text: #69696A; // User definied
+$color--text: #69696A; // User defined
 $color--text-light: mix($color--text, $color--background, 80%);
 $color--text-lighter: mix($color--text, $color--background, 60%);
-$color--text-hover: darken($color--text, 10%);
+$color--text-hover: morph($color--text);
 $color--heading: #18191C; // User defined
-$color--captions: $color--accent; // User defined
+$color--captions: #3B4857; // User defined
 
 /* Buttons */
-$color--button-primary-background: $color--accent; // User definded
-$color--button-primary-background-hover: darken($color--accent, 10%);
+$color--button-primary-background: $color--accent; // User defined
+$color--button-primary-background-hover: morph($color--accent);
 $color--button-primary-text: $color--background; // User defined
 
 $color--button-secondary-background: $color--background; // User defined
 $color--button-secondary-background-hover: mix($color--accent, $color--background, 5%);
 $color--button-secondary-border: $color--accent; // User defined
-$color--button-secondary-border-hover: darken($color--button-secondary-border, 5%);
+$color--button-secondary-border-hover: morph($color--button-secondary-border);
 $color--button-secondary-text: $color--accent; // User defined
-$color--button-secondary-text-hover: darken($color--button-secondary-text, 15%);
+$color--button-secondary-text-hover: morph($color--button-secondary-text);
 
 /* Inputs */
+$color--input-text: $color--text; // User defined
 $color--input-background: $color--background; // User defined
 $color--input-background-hover: mix($color--text, $color--background, 5%);
 $color--input-border: #D0D0D0; // User defined
-$color--input-border-hover: darken($color--input-border, 10%);
+$color--input-border-hover: morph($color--input-border);
+$color--input-placeholder-text: mix($color--input-text, $color--input-background, 40%);
 
 /* Animations */
 $transition--easing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -120,17 +125,18 @@ $transition--long: 0.35s;
 $transition--longer: 0.5s;
 
 // Horizontal Spacing
-$gutter-xs: rem($font-size-base) / 4; // 4px
+$gutter-xs: rem($font-size-base * $multiplier) / 4; // 4px
 $gutter-small: rem($font-size-base * $multiplier); // 16px
 $gutter-medium: rem($font-size-base * ($multiplier * 1.5)); // 24px
 $gutter-large: rem($font-size-base * 2); // 32px
 $gutter-xl: rem($font-size-base * 3.5); // 56px
 
-// Vertical Spacing
+
+// Modifier Spacing
 $space-xxx-small: rem($font-size-base * ($multiplier * 0.25)); // 4px
 $space-xx-small: rem($font-size-base * ($multiplier * 0.5)); // 8px
 $space-x-small: rem($font-size-base * ($multiplier * 0.75)); // 12px
-$space-small: rem($font-size-base * ($multiplier)); // 16px
+$space-small: rem($font-size-base * $multiplier); // 16px
 $space-medium: rem($font-size-base * ($multiplier * 1.25)); // 20px
 $space-large: rem($font-size-base * ($multiplier * 1.5)); // 24px
 $space-x-large: rem($font-size-base * ($multiplier * 2)); // 32px
@@ -142,7 +148,7 @@ $button-size-large: $space-xxx-large;
 $button-size-default: $space-xx-large;
 $button-size-small: calc(#{$space-x-large} + #{$space-xxx-small});
 
-$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px)
+$button-padding-large: rem($font-size-base * ($multiplier * 0.875)) $gutter-small; // 14px 16px (48px) 21px
 $button-padding-default: rem($font-size-base * ($multiplier * 0.625)) $space-small; // 10px 12px (40px)
 $button-padding-small: $space-xx-small $space-x-small; // 8px 12px (36px)
 
