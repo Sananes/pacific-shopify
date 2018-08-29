@@ -9,10 +9,10 @@ $font--default: system, -apple-system, ".SFNSText-Regular", "SF Pro Text", "Robo
 $font--body: 'Avenir Next', $font--default; // User defined
 $font--button: 'Futura', $font--default; // User defined
 $font--heading: 'Futura', $font--default; // User defined
-$font--captions: $font--body; // User defined
-$font--store-title: $font--heading; // User defined
-$font--section-headings: $font--body; // User defined
-$font--menu: $font--body; // User definied
+$font--captions: 'Avenir Next', $font--default; // User defined
+$font--store-title: 'Futura', $font--default; // User defined
+$font--section-headings: 'Avenir Next', $font--default; // User defined
+$font--menu: 'Avenir Next', $font--default; // User definied
 
 $font--label: $font--body;
 $font--input: $font--body;
@@ -31,7 +31,7 @@ $font-size-body-smallest: rem($font-size-base * 0.625); // 10px
 $font-size-body-smaller: rem($font-size-base * 0.75); // 12px
 $font-size-body-small: rem($font-size-base * 0.875); // 14px
 $font-size-body: rem($font-size-base); // 16px
-$font-size-body-medium: rem($font-size-base * 1.5); // 18px
+$font-size-body-large: rem($font-size-base * 1.5); // 18px
 
 $font-size-heading-1: rem($font-size-base * 3); // 48px
 $font-size-heading-2: rem($font-size-base * 2); // 32px
