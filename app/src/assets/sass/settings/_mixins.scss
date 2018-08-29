@@ -252,3 +252,44 @@
     @content;
   } 
 }
+
+// Determine hover color based on color's saturation and lightness
+@function morph($color, $adjustment-value: 2) {
+  $lightness: lightness($color);
+  $light-color: false;
+
+  @if $lightness > 35% { $light-color: true; }
+
+  @if $light-color {
+    $lightness: ($lightness / 20) * $adjustment-value;
+    $color: darken($color, $lightness);
+  } @else {
+    @if $lightness < 2.5% {
+      $lightness: 45%;
+    } @else if $lightness < 7.5% {
+      $lightness: 30%;
+    }  @else if $lightness < 35% {
+      $lightness: 5%;
+    }
+
+    $lightness: ($lightness / 10) * $adjustment-value;
+    $color: lighten($color, $lightness);
+  }
+
+  $saturation: saturation($color);
+  $saturated-color: false;
+
+  @if $saturation > 0% { $saturated-color: true; }
+
+  $saturation: ($saturation / 20);
+
+  @if $saturated-color {
+    @if $light-color {
+      $color: desaturate($color, $saturation);
+    } @else {
+      $color: saturate($color, $saturation);
+    }
+  }
+
+  @return $color;
+}
