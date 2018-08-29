@@ -53,6 +53,7 @@ $color--background: #fff; // User defined
 $color--placeholder: #f6f6f6;
 $color--header-background: #fff; // User defined
 $color--accent: #4556C2; // User defined
+$color--accent-hover: darken($color--accent, 10%);
 $color--border: #E5E5E5; // User defined
 $color--error: red; // User defined
 $color--menu: #18191C; // User defined
@@ -60,7 +61,7 @@ $color--black: #000;
 $color--white: #fff;
 
 /* Text colors */
-$color--text: #69696A; // User definied
+$color--text: #69696A; // User defined
 $color--text-light: mix($color--text, $color--background, 80%);
 $color--text-lighter: mix($color--text, $color--background, 60%);
 $color--text-hover: darken($color--text, 10%);
@@ -68,7 +69,7 @@ $color--heading: #18191C; // User defined
 $color--captions: $color--accent; // User defined
 
 /* Buttons */
-$color--button-primary-background: $color--accent; // User definded
+$color--button-primary-background: $color--accent; // User defined
 $color--button-primary-background-hover: darken($color--accent, 10%);
 $color--button-primary-text: $color--background; // User defined
 
@@ -80,10 +81,12 @@ $color--button-secondary-text: $color--accent; // User defined
 $color--button-secondary-text-hover: darken($color--button-secondary-text, 15%);
 
 /* Inputs */
+$color--input-text: $color--text; // User defined
 $color--input-background: $color--background; // User defined
 $color--input-background-hover: mix($color--text, $color--background, 5%);
 $color--input-border: #D0D0D0; // User defined
 $color--input-border-hover: darken($color--input-border, 10%);
+$color--input-placeholder-text: mix($color--input-text, $color--input-background, 40%);
 
 /* Animations */
 $transition--easing: cubic-bezier(0.4, 0, 0.2, 1);
