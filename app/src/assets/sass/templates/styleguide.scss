@@ -29,6 +29,9 @@
   }
 
   .menu-font {
+    @include font-size($font-size--body);
+    color: $color--header-text;
+    font-weight: 500;
     margin-top: 0;
   }
 }
