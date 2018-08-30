@@ -34,4 +34,13 @@
     font-weight: 500;
     margin-top: 0;
   }
+
+  .button-font {
+    @include font-size($font-size--body-small);
+    font-family: $font--button;
+    font-weight: $font--weight-medium; // User defined
+    text-transform: uppercase; // User defined
+    letter-spacing: 1px; // User defined
+    line-height: 1.5;
+  }
 }
