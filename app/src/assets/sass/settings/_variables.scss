@@ -1,6 +1,6 @@
 /* Base
 ------------------------- */
-$font-size-base: 14;
+$font-size-base: 16;
 $line-height: 1.75;
 $lines: 4px;
 
@@ -84,8 +84,8 @@ $color--button-secondary-border-hover: morph($color--button-secondary-border);
 $color--button-secondary-text: $color--accent; // User defined
 $color--button-secondary-text-hover: morph($color--button-secondary-text);
 
-$color--button-disabled-background: transparentize($color-background, 0.9);
-$color--button-disabled-text: $color--lighter;
+$color--button-disabled-background: transparentize($color--background, 0.9);
+$color--button-disabled-text: $color--text-lighter;
 
 /* Inputs */
 $color--input-text: $color--text; // User defined
