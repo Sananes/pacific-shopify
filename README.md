@@ -1,32 +1,6 @@
-# Pacific Style Guide
-
-Here you'll find the source of truth for the Pacific style guide.
-
-## New color settings:
-- Menu text
-- Header background
-- Input background
-- Input borders
-- Input text
-
-## New font settings:
-We are introducing a new Base size for typography. This will allow the user to choose between "Small (14px), Medium (16px), Large (18px)".
-
-In general we've added the ability to adjust letter spacing for individual typography options. These include:
-- Headings
-- Menu
-- Buttons
-- Captions
-- Section Headings
-
-## New global spacing settings:
-The theme will have a modular scale built in. This will allow merchants to choose based on 3 options (Compact, Comfortable, Cozy). These values will adjust the general size of spacing across the theme.
-
-## Variables
-```
 /* Base
 ------------------------- */
-$font-size-base: 14;
+$font-size-base: 16;
 $line-height: 1.75;
 $lines: 4px;
 
@@ -110,8 +84,8 @@ $color--button-secondary-border-hover: morph($color--button-secondary-border);
 $color--button-secondary-text: $color--accent; // User defined
 $color--button-secondary-text-hover: morph($color--button-secondary-text);
 
-$color--button-disabled-background: transparentize($color-background, 0.9);
-$color--button-disabled-text: $color--lighter;
+$color--button-disabled-background: transparentize($color--background, 0.9);
+$color--button-disabled-text: $color--text-lighter;
 
 /* Inputs */
 $color--input-text: $color--text; // User defined
@@ -175,4 +149,3 @@ $breakpoints: (
 /* Breakpoint values */
 $min-width: 320px;
 $max-width: 1280px;
-```
