@@ -26,7 +26,7 @@ The theme will have a modular scale built in. This will allow merchants to choos
 ```
 /* Base
 ------------------------- */
-$font-size-base: 16;
+$font-size-base: 16px;
 $line-height: 1.75;
 $lines: 4px;
 
@@ -99,16 +99,16 @@ $color--heading: #18191C; // User defined
 $color--captions: #3B4857; // User defined
 
 /* Buttons */
+$color--button-primary-text: $color--background; // User defined
 $color--button-primary-background: $color--accent; // User defined
 $color--button-primary-background-hover: morph($color--accent);
-$color--button-primary-text: $color--background; // User defined
 
-$color--button-secondary-background: $color--background; // User defined
-$color--button-secondary-background-hover: mix($color--accent, $color--background, 5%);
 $color--button-secondary-border: $color--accent; // User defined
 $color--button-secondary-border-hover: morph($color--button-secondary-border);
 $color--button-secondary-text: $color--accent; // User defined
 $color--button-secondary-text-hover: morph($color--button-secondary-text);
+$color--button-secondary-background: $color--background; // User defined
+$color--button-secondary-background-hover: mix($color--button-secondary-border, $color--button-secondary-background, 10%);
 
 $color--button-disabled-background: transparentize($color--background, 0.9);
 $color--button-disabled-text: $color--text-lighter;
