@@ -43,4 +43,11 @@
     letter-spacing: 1px; // User defined
     line-height: 1.5;
   }
+
+  .section-title-font {
+    @include font-size($font-size--heading-5);
+    text-transform: uppercase;
+    color: $color--captions;
+    letter-spacing: 1px;
+  }
 }

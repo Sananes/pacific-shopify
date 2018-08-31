@@ -88,7 +88,7 @@ button {
   font-family: $font--captions;
   @include font-size($font-size--body-smaller);
   text-transform: uppercase;
-  color: $color--text;
+  color: $color--text-light;
   letter-spacing: 1px;
 }
 
@@ -152,9 +152,10 @@ button {
   border-top: 1px solid $color--border;
 
   .section-heading {
-    @include font-size($font-size--heading-6);
+    @include font-size($font-size--heading-5);
     text-align: center;
     text-transform: uppercase;
+    color: $color--captions;
     letter-spacing: 1px;
     @include margin-bp(#{$space-xxx-large}, auto, #{$space-xxx-large}, auto);
   }
