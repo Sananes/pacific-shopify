@@ -72,7 +72,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: gutter() 10% gutter() gutter();
+  padding: gutter();
+
+  @include breakpoint(l) {
+    padding: susy-gutter($susy-desktop-small); // 24px
+  }
+  @include breakpoint(m) {
+    padding: susy-gutter($susy-tablet); // 18px
+  }
+  @include breakpoint(s) {
+    padding: susy-gutter($susy-mobile); // 14px
+  }
 
   .collection-alignment-center & {
     margin: 0 auto;

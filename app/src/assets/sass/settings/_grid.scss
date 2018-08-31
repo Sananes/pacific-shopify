@@ -1,22 +1,20 @@
 $susy: (
-    'columns': susy-repeat(4),
-    'gutters': 2rem * $multiplier,
+    'gutters': 32px,
     'max-width' : 1280px,
-    'spread': 'narrow',
-    'container-spread': 'narrow',
+);
+
+$susy-desktop-small: (
+    'gutters': 24px,
 );
 
 $susy-tablet: (
-    'columns': susy-repeat(12),
-    'gutters': 1.5rem * $multiplier,
+    'gutters': 18px,
 );
 
 $susy-mobile: (
-    'columns': susy-repeat(4),
-    'gutters': 1rem * $multiplier,
+    'gutters': 14px,
 );
 
 $susy-tiny: (
-    'columns': susy-repeat(4),
-    'gutters': 0.5rem * $multiplier, 
+    'gutters': 14px, 
 );   
