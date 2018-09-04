@@ -38,7 +38,7 @@ $font--heading: 'Futura', $font--default; // User defined
 $font--captions: 'Avenir Next', $font--default; // User defined
 $font--store-title: 'Futura', $font--default; // User defined
 $font--section-headings: 'Avenir Next', $font--default; // User defined
-$font--menu: 'Avenir Next', $font--default; // User definied
+$font--main-menu: 'Avenir Next', $font--default; // User definied
 
 $font--label: $font--body;
 $font--input: $font--body;
@@ -96,7 +96,7 @@ $color--text-light: mix($color--text, $color--background, 80%);
 $color--text-lighter: mix($color--text, $color--background, 60%);
 $color--text-hover: morph($color--text);
 $color--heading: #18191C; // User defined
-$color--captions: #3B4857; // User defined
+$color--heading-light: #3B4857; // User defined
 
 /* Buttons */
 $color--button-primary-text: $color--background; // User defined
