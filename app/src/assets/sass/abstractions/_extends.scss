@@ -120,6 +120,10 @@ button {
 .container {
   @include container;
 
+  @include breakpoint(l) {
+    @include container(all, $susy-desktop-small);
+  }
+
   @include breakpoint(m) {
     @include container(all, $susy-tablet);
   }
@@ -141,11 +145,32 @@ button {
 %section-divider {
   @extend %container;
   @include margin-bp(#{$space-xxx-large}, auto, #{$space-xxx-large}, auto);
-  max-width: calc(1280px * #{$multiplier} - (#{susy-gutter($susy)} * 2));
+  max-width: calc(#{$max-width} - (#{susy-gutter($susy)} * 2));
   width: calc(100% - (#{susy-gutter($susy)} * 2));
   height: 1px;
   line-height: 1px;
   border-top: 1px solid $color--border;
+  
+  @include breakpoint(l) {
+    max-width: calc(#{$max-width} - (#{susy-gutter($susy-desktop-small)} * 2));
+    width: calc(100% - (#{susy-gutter($susy-desktop-small)} * 2));
+  }
+
+  @include breakpoint(m) {
+    max-width: calc(#{$max-width} - (#{susy-gutter($susy-tablet)} * 2));
+    width: calc(100% - (#{susy-gutter($susy-tablet)} * 2));
+  }
+
+  @include breakpoint(s) {
+    max-width: calc(#{$max-width} - (#{susy-gutter($susy-mobile)} * 2));
+    width: calc(100% - (#{susy-gutter($susy-mobile)} * 2));
+  }
+
+  @include breakpoint(xs) {
+    max-width: calc(#{$max-width} - (#{susy-gutter($susy-tiny)} * 2));
+    width: calc(100% - (#{susy-gutter($susy-tiny)} * 2));
+  }
+  
 }
 
 %section-title {

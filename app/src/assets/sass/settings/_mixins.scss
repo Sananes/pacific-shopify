@@ -66,6 +66,11 @@
     margin-right: gutter();
   }
 
+  @include breakpoint(l) {
+    margin-right: gutter($susy-desktop-small);
+    width: span($span, $susy-desktop-small);
+  }
+
   @include breakpoint(m) {
     margin-right: gutter($susy-tablet);
     width: span($span, $susy-tablet);
@@ -88,20 +93,20 @@
 
 @mixin breakpoint($point) {
   @if $point == xl {
-    @media (min-width: em(1021px)) { @content; }
+    @media (min-width: 1021px) { @content; }
   }
   @else if $point == l {
-    @media (max-width: em(1020px)) { @content; }
+    @media (max-width: 1020px) { @content; }
   }
   @else if $point == m {
-    @media (max-width: em(720px)) { @content; }
+    @media (max-width: 720px) { @content; }
   }
   @else if $point == s {
-    @media (max-width: em(540px)) { @content; }
+    @media (max-width: 540px) { @content; }
   }
 
   @else if $point == xs {
-    @media (max-width: em(360px)) { @content; }
+    @media (max-width: 360px) { @content; }
   }
 }
 
@@ -172,7 +177,7 @@
   margin-bottom: $bottom;
   margin-left: $left;
 
-  @include breakpoint(m) {
+  @include breakpoint(l) {
     margin-top: calc(#{$top} / 1.5);
 
     @if $right, $left == "auto" {

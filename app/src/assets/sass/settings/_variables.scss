@@ -140,12 +140,12 @@ $input-padding-default: calc(7px * #{$multiplier}) $space-xx-small calc(7px * #{
 /* Breakpoints
 ------------------------- */
 $breakpoints: (
-  s     : em(540px),
-  m     : em(720px),
-  l     : em(1020px),
-  xl    : em(1021px),
+  s     : 540px,
+  m     : 720px,
+  l     : 1020px,
+  xl    : 1021px,
 );
 
 /* Breakpoint values */
 $min-width: 320px;
-$max-width: 1280px;
+$max-width: 1364px;
