@@ -150,18 +150,10 @@ select {
   display: block;
 
   .custom-select-wrapper {
+    @extend %input;
     display: inline-flex;
     align-items: center;
-    border: 1px solid $color--input-border;
-    padding: $input-padding-default;
-    background: $color--input-background;
-    vertical-align: middle;
-    border-radius: $border-radius;
     cursor: pointer;
-    width: 100%;
-    transition: color $transition--short $transition--easing,
-    background-color $transition--medium $transition--easing,
-    border $transition--medium $transition--easing;
 
     span {
       flex: 1;
@@ -171,25 +163,11 @@ select {
       margin-left: 4px;
     }
 
-    &:hover,
-    &.hover {
-      color: $color--text-hover;
-      border-color: $color--input-border-hover;
-      background-color: $color--input-background-hover;
-    }
-
-    &:focus,
-    &.focused {
-      outline: 1;
-      outline-color: #5891FF;
-      border: 1px solid #5891FF;
+    &.disabled {
+      cursor: default;
     }
   }
-
-  &.active {
-
-  }
-
+  
   .custom-select-dropdown {
     display: none;
   }

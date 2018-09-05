@@ -18,10 +18,10 @@ block content
         +label-component('Hover')
       .style-guide-component
         +select('Select', 'Label', 'focused hover')
-        +label-component('Focused')
+        +label-component('Focus / Active')
       .style-guide-component
-        +select('Select', 'Label', 'active hover', true)
-        +label-component('Active')
+        +select('Select', 'Label', 'disabled', true)
+        +label-component('Disabled')
 
     .style-guide-row.style-guide-row-of-3
       h4 Inputs
@@ -30,16 +30,19 @@ block content
         input(placeholder="Placeholder")
         +label-component('Default')
       .style-guide-component
-        +select('Select', 'Label', 'hover')
+        label.label Label
+        input(placeholder="Placeholder" class="hover")
         +label-component('Hover')
       .style-guide-component
-        +select('Select', 'Label', 'focused hover')
-        +label-component('Focused')
+        label.label Label
+        input(placeholder="Placeholder" class="focused hover")
+        +label-component('Focus / Active')
       .style-guide-component
-        +select('Select', 'Label', 'active hover', true)
-        +label-component('Active')
+        label.label Label
+        input(placeholder="Placeholder" class="disabled" disabled)
+        +label-component('Disabled')
 
-    .style-guide-row.style-guide-row-of-3
+    .style-guide-row.style-guide-row-of-5
       h2 Buttons
       h4 Primary
       .style-guide-component
@@ -49,12 +52,15 @@ block content
         button.hover Button
         +label-component('Hover')
       .style-guide-component
-        button.focus Button
+        button.focused Button
         +label-component('Focused')
       .style-guide-component
-        button.pressed.hover Button
-        +label-component('Pressed')
-    .style-guide-row.style-guide-row-of-3
+        button.active.hover.focused Button
+        +label-component('Active (pressed)')
+      .style-guide-component
+        button.disabled Button
+        +label-component('Disabled') 
+    .style-guide-row.style-guide-row-of-5
       h4 Secondary
       .style-guide-component
         button.secondary Button
@@ -63,11 +69,14 @@ block content
         button.secondary.hover Button
         +label-component('Hover')
       .style-guide-component
-        button.secondary.focus Button
+        button.secondary.focused Button
         +label-component('Focused')
       .style-guide-component
-        button.secondary.pressed.hover Button
-        +label-component('Pressed')
+        button.secondary.active.hover.focused Button
+        +label-component('Active (pressed)')
+      .style-guide-component
+        button.disabled Button
+        +label-component('disabled')
     .style-guide-row.style-guide-row-of-3
       h4 Large Button
       p Increase the padding of the base button

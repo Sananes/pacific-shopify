@@ -19,6 +19,14 @@
       margin-right: 0;
     }
   }
+
+  .style-guide-row-of-5 & {
+    @include span(4 of 20);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
   
   .style-guide-label {
     border-top: 1px solid $color--border;
