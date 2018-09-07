@@ -74,12 +74,12 @@ $color--heading-light: #3B4857; // User defined
 
 /* Buttons */
 $color--button-primary-text: #fff; // User defined
-$color--button-primary-background: #000; // User defined
+$color--button-primary-background: #5c68ca; // User defined
 $color--button-primary-background-hover: morph($color--button-primary-background);
 
-$color--button-secondary-border: #000; // User defined
+$color--button-secondary-border: #5c68ca; // User defined
 $color--button-secondary-border-hover: morph($color--button-secondary-border);
-$color--button-secondary-text: #000; // User defined
+$color--button-secondary-text: #5c68ca; // User defined
 $color--button-secondary-text-hover: morph($color--button-secondary-text);
 $color--button-secondary-background: #fff; // User defined
 $color--button-secondary-background-hover: mix($color--button-secondary-border, $color--button-secondary-background, 10%);
@@ -96,7 +96,7 @@ $color--input-border: #d0d0d0; // User defined
 $color--input-border-hover: morph($color--input-border);
 $color--input-border-disabled: mix($color--input-text, $color--input-background, 30%);
 $color--input-placeholder-text: mix($color--input-text, $color--input-background, 50%);
-$color--input-focus-color: #5891FF;
+$color--input-focus-color: #58A3ff;
 
 /* Animations */
 $transition--easing: cubic-bezier(0.4, 0, 0.2, 1);
