@@ -1,0 +1,72 @@
+.quantity {
+  display: inline-block;
+}
+
+.quantity-input {
+  @extend %input;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: auto;
+  padding: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  min-width: 40px;
+  min-height: 39px;
+  text-align: center;
+  z-index: 10;
+}
+
+.quantity-actions {
+  position: relative;
+  float: left;
+  display: inline-block;
+  margin-left: -1px;
+  z-index: 8;
+
+  &:hover {
+    z-index: 11;
+  }
+}
+
+.quantity-plus, .quantity-minus {
+  position: relative;
+  @extend %input;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  max-width: 20px;
+  max-height: 20px;
+  height: 20px;
+  padding: 0;
+  line-height: 16px;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  float: left;
+
+  &:hover {
+    z-index: 12;
+    border-color: $color--input-border-hover;
+  }
+}
+
+.quantity-minus {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: $border-radius;
+  margin-top: -1px;
+}
+
+.quantity-plus svg,
+.quantity-minus svg {
+  width: 8px;
+  height: 8px;
+
+  path {
+    stroke: 3;
+  }
+} 

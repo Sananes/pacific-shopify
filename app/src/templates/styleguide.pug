@@ -22,6 +22,20 @@ block content
       .style-guide-component
         +select('Select', 'Label', 'disabled', true)
         +label-component('Disabled')
+    .style-guide-row.style-guide-row-of-3
+      h4 Quantity
+      .style-guide-component
+        +qty()
+        +label-component('Default')
+      .style-guide-component
+        +qty('hover')
+        +label-component('Hover')
+      .style-guide-component
+        +qty('focused')
+        +label-component('Focused')
+      .style-guide-component
+        +qty('disabled')
+        +label-component('Disabled')
 
     .style-guide-row.style-guide-row-of-3
       h4 Inputs

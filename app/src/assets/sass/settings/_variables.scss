@@ -24,7 +24,7 @@ $compact: 0.875;
 $comfortable: 1; // Default
 $cozy: 1.2;
 
-$multiplier: $comfortable; // User defined
+$multiplier: $cozy; // User defined
 
 /* Font Sizes */
 $font-size-body-large: rem($font-size-base * 1.125); // 18px
