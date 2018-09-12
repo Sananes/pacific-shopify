@@ -1,7 +1,7 @@
 mixin svg(id, viewbox, className)
 	if viewbox
 		svg(viewbox= viewbox, class!= className, fill="none")
-			use(xlink:href='assets/img/sprite.svg#' + id)
+			use(xlink:href='/assets/img/sprite.svg#' + id)
 	else
 		svg(viewbox='0 0 20 20', class!= className, fill="none", width="20", height="20")
-			use(xlink:href='assets/img/sprite.svg#' + id)
+			use(xlink:href='/assets/img/sprite.svg#' + id)
